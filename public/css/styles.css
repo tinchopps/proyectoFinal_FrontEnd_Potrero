@@ -1,0 +1,254 @@
+/* Variables globales */
+:root {
+    --color-primario: #007bff;
+    --color-acento: #ffa500;
+    --color-texto: #333333;
+    --color-fondo: #f9f9f9;
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma , Verdana, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos de navegación */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.971);
+}
+
+/*Estilos Carosel */
+.carousel-caption {
+    color: var(--color-texto);
+}
+
+
+
+
+/* Estilos de productos */
+
+.card-img-top {
+    width: 100%; /* Asegura que se ajuste al ancho de la tarjeta */
+    height: 200px; /* Altura fija */
+    object-fit: cover; /* Ajusta la imagen para que no se distorsione */
+    border-radius: 5px; /* Bordes suaves opcionales */
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.producto-tarjeta {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.producto-tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+.producto-tarjeta img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.producto-tarjeta h3 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+}
+
+.precio {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-acento);
+    margin: 1rem 0;
+}
+
+.embed-responsive-item {
+    height: 500px; /* Altura personalizada */
+    width: 90%; /* Más grande */
+    margin-right: 10%; /* Mueve ligeramente hacia la derecha */
+    object-fit: cover; /* Mantiene proporciones */
+}
+
+h2 {
+    font-size: 2.5rem; /* Texto más grande */
+    font-weight: bold;
+    color: #34495e;
+}
+
+.rounded {
+    border-radius: 15px; /* Bordes más redondeados */
+}
+
+.shadow {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más marcada */
+}
+
+
+
+/* Estilos del formulario */
+.formulario-contacto {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contacto h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.formulario-contacto .form-control,
+.formulario-contacto .form-select {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 0.75rem;
+}
+
+.formulario-contacto .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contacto .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Información de contacto */
+.info-contacto h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #555555;
+}
+
+.info-contacto p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Mapa */
+.ratio iframe {
+    border: none;
+}
+
+/* Estilos del pie de página */
+footer {
+    margin-top: auto;
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-primario), var(--color-acento));
+}
+
+.footer-logo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.footer-logo i {
+    font-size: 2rem;
+    color: var(--color-acento);
+}
+
+footer h4 {
+    color: var(--color-acento);
+    position: relative;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+footer h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--color-acento);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-acento);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: var(--color-acento);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+
+    .formulario-contacto,
+    .info-contacto {
+        text-align: center;
+    }
+    
+    .productos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    
+    .footer-logo {
+        width: 120px;
+        height: 120px;
+    }
+}
